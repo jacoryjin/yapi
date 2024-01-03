@@ -48,7 +48,8 @@ function connect(callback) {
     }
   }
 
-  let db = mongoose.connect(
+  const db= mongoose.connection;
+  mongoose.connect(
     connectString,
     options,
     function(err) {
